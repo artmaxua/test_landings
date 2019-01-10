@@ -1266,7 +1266,7 @@ i.face {
 }
 .result__item1,.result__item2,.result__item3 {
     max-width: 240px;
-    padding:5px 0 5px 65px;
+    padding:5px 40px 5px 65px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
