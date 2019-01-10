@@ -121,7 +121,12 @@
   };
 
   $(document).ready(function() {
-    var elemS = $(".js-scroll-animation").children();
-    new ScrollAnim(elemS.get(0), elemS.get(1));
+    if (isMobile.apple.phone) {
+      $(".js-scroll-animation").addClass("is-iphone");
+    }
+    var elemS = $(".js-scroll-animation:not(.is-iphone)").children();
+    if (elemS) {
+      new ScrollAnim(elemS.get(0), elemS.get(1));
+    }
   });
 })(window);
