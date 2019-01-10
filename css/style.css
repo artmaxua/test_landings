@@ -550,7 +550,8 @@ i.product_safe {
 
 .hurry .counter__elem {
 	background-color: #f1f2f2;
-	font-family: "Roboto Medium";
+	font-family: "Roboto";
+	font-weight: 500;
 	color: #a0021d;
 	font-size: 1.8025rem;
 	line-height: 1.6875rem;
