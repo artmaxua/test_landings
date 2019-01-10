@@ -71,7 +71,7 @@
     this.elemAbove = elemAbove;
     this.opacity = 1;
     this.step = 10;
-    this.touchStep = 30;
+    this.touchStep = 2;
 
     this.resetHelpers();
     this._setEvents();
