@@ -121,9 +121,9 @@
   };
 
   $(document).ready(function() {
-    if (isMobile.apple.phone) {
-      $(".js-scroll-animation").addClass("is-iphone");
-    }
+    // if (isMobile.apple.phone) {
+    //   $(".js-scroll-animation").addClass("is-iphone");
+    // }
     var elemS = $(".js-scroll-animation:not(.is-iphone)").children();
     if (elemS) {
       new ScrollAnim(elemS.get(0), elemS.get(1));
