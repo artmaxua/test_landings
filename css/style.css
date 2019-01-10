@@ -1118,7 +1118,7 @@ i.face {
 	height: 64px
 }
 
-.text-medium{position:relative;font-family:"Roboto Medium";font-size:13px;line-height: 16px;padding: 12px 5px 0;}
+.text-medium{position:relative;font-family:"Roboto";font-weight:500;font-size:13px;line-height: 16px;padding: 12px 5px 0;}
 
 .problem ul li:last-child {
 	margin-bottom: 30px
@@ -1274,7 +1274,8 @@ i.face {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-family:"Roboto Medium";
+    font-family:"Roboto";
+    font-weight: 500;
     font-size:14px;
     line-height:16px;
     color:#241f1f;
