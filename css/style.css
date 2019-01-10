@@ -110,7 +110,7 @@ menu,
 nav,
 section {
 	display: block;
-	width: 768px;
+	max-width: 768px;
 	margin: 0 auto;
 }
 
