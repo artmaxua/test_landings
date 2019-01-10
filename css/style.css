@@ -363,7 +363,7 @@ body {
 .htop {
 	background: url(../img/girl1.png) center bottom no-repeat;
 	min-height: 364px;
-	padding: 5px 0 35px;
+	padding: 5px 0 5px;
 	position: relative
 }
 
@@ -587,6 +587,13 @@ i.product_safe {
 	-webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
 	box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
 }
+
+.price__header{text-align: right;padding:184px 115px 0px 0px;position:relative;}
+.price__header .price__old{font-size:28px;opacity:0.5;line-height: 16px}
+.price__header .price__old::after{content:"";position:absolute;background:#241f1f;height:1px;width:52px;top:192px;right:110px;}
+.price__header .price__new{font-size:53px;line-height:33px;}
+.price__header .price__old-currency{font-size:21px;}
+.price__header .price__new-currency{font-size:40px;}
 
 .order-head {
 	padding: 5px 15px 15px;
@@ -1408,7 +1415,6 @@ i.face {
 
 .footer{padding: 36px 0 16px;text-align: center;}
 .footer p{font-size:16px; line-height: 19px; margin-bottom: 20px;}
-.footer a{color:inherit;}
 
 @-webkit-keyframes body-play {
 	0% {

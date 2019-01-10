@@ -70,8 +70,8 @@
     this.elemUnder = elemUnder;
     this.elemAbove = elemAbove;
     this.opacity = 1;
-    this.step = 10;
-    this.touchStep = 2;
+    this.step = 4;
+    this.touchStep = 15;
 
     this.resetHelpers();
     this._setEvents();
@@ -94,37 +94,44 @@
         _this.resetHelpers();
       })
       .on("scroll", function(evt) {
+        _this.opacity = parseFloat($(_this.elemAbove).css("opacity"));
         var windowScrolled = _this._getScrolledCenter();
         if (windowScrolled >= _this.animationStart && _this.opacity > 0) {
           noScroll.on();
           stopScroll = true;
+          $(".navbar").addClass("fixed-stoped");
         }
       })
       .on("mousewheel", function(evt) {
+        _this.opacity = parseFloat($(_this.elemAbove).css("opacity"));
         if (stopScroll && _this.opacity > 0) {
           _this.opacity -= (0.1 * 10) / (_this.step - 1);
           $(_this.elemAbove).css("opacity", _this.opacity);
         } else {
           noScroll.off();
           stopScroll = false;
+          $(".navbar").removeClass("fixed-stoped");
         }
       })
       .on("touchmove", function(evt) {
+        _this.opacity = parseFloat($(_this.elemAbove).css("opacity"));
         if (stopScroll && _this.opacity > 0) {
           _this.opacity -= (0.1 * 10) / (_this.touchStep - 1);
           $(_this.elemAbove).css("opacity", _this.opacity);
-        } else {
+        }
+      })
+      .on("touchend", function(evt) {
+        _this.opacity = parseFloat($(_this.elemAbove).css("opacity"));
+        if (stopScroll && _this.opacity <= 0) {
           noScroll.off();
           stopScroll = false;
+          $(".navbar").removeClass("fixed-stoped");
         }
       });
   };
 
   $(document).ready(function() {
-    // if (isMobile.apple.phone) {
-    //   $(".js-scroll-animation").addClass("is-iphone");
-    // }
-    var elemS = $(".js-scroll-animation:not(.is-iphone)").children();
+    var elemS = $(".js-scroll-animation").children();
     if (elemS) {
       new ScrollAnim(elemS.get(0), elemS.get(1));
     }
