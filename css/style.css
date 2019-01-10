@@ -646,7 +646,7 @@ i.product_safe {
 	display: flex;
 	-webkit-box-align: end;
 	-ms-flex-align: end;
-	align-items: flex-end;
+	align-items: baseline;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	font-weight: 300;
@@ -654,17 +654,22 @@ i.product_safe {
 	-ms-flex-pack: center;
 	justify-content: center;
 	line-height: 1;
-	padding-left: 50px;
+	padding-left: 67px;
+	padding-bottom: 2px;
 	text-align: center;
 	font-weight: 300;
-	min-height: 77px
+	min-height: 57px
 }
 
 .order .price__new,
 .order .price__old {
-	display: inline-block;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	position: relative;
-	white-space: nowrap;
 	font-size: 0
 }
 
@@ -705,15 +710,15 @@ i.product_safe {
 }
 
 .order .price__old-cost {
-	font-size: 31px
+	font-size: 38px
 }
 
 .order .price__old-currency {
-	font-size: 31px
+	font-size: 26px
 }
 
 .order .price__new-cost {
-	font-size: 55px
+	font-size: 77px
 }
 
 .order .price__new-currency {
@@ -721,18 +726,19 @@ i.product_safe {
 }
 
 .order__border {
-	width: 100%;
+	width: 96%;
 	height: 1px;
 	background-color: #fff;
-	display: inline-block
+	display: inline-block;
+	float: right;
 }
 
 .order__title {
 	font-size: 1.125rem;
 	font-weight: 500;
 	line-height: 1.375rem;
-	margin: auto auto 20px;
-	padding: 13px 10px 0;
+	margin: auto;
+	padding: 11px 10px 2px;
 	color: #fff;
 	text-align: center;
 	text-transform: uppercase
@@ -740,7 +746,7 @@ i.product_safe {
 
 .order form {
 	background: #ffeaea;
-	padding: 15px 20px 25px;
+	padding: 25px 20px 30px;
 	position: relative;
 	border-top: none
 }
@@ -779,13 +785,13 @@ i.product_safe {
 
 .order .form__input {
 	background-color: #fff;
-	border: 1px solid #959595;
+	border: 1px solid #cccccc;
 	border-radius: 4px;
 	color: #000;
 	display: block;
 	font-size: .875rem;
 	height: 38px;
-	margin-bottom: 13px;
+	margin-bottom: 24px;
 	padding: 0 8px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -888,6 +894,7 @@ i.product_safe {
 	font-weight: 400;
 	font-size: 18px;
 	color: #ffffff;
+	margin: 10px auto;
 }
 
 .order .button-wrap {
@@ -1070,7 +1077,7 @@ i.product_safe {
 }
 
 .problem .content div {
-	max-width: 95px;
+	max-width: 96px;
 	width: 100%;
 	-ms-flex-preferred-size: 140px;
 	flex-basis: 140px;
@@ -1265,8 +1272,8 @@ i.face {
 	padding: 0px 0px 0px 52px;
 }
 .result__item1,.result__item2,.result__item3 {
-    max-width: 240px;
-    padding:5px 40px 5px 65px;
+    max-width: 200px;
+    padding:5px 0px 5px 65px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1339,6 +1346,15 @@ i.face {
 	opacity: 0
 }
 
+.fixed,
+.fixed-stoped {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	margin-top: 0;
+	-webkit-transition: 1s all;
+	transition: 1s all;
+}
+
 .howuse p{
 	margin-bottom:15px;
 	font-size:14px;
@@ -1351,7 +1367,7 @@ i.face {
 .reviews{background:url(../img/reviews.png) center top -20px no-repeat, #ffb9bb;min-height: 650px}
 .reviews h2{font-size:30px;line-height:35px;padding:35px 0 18px;text-align:center;}
 
-.bottom{background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #3e2323), color-stop(50%, #ffb9bb));background: linear-gradient(to bottom, #3e2323 50%, #ffb9bb 50%);padding-bottom:55px;}
+.bottom{background: linear-gradient(to bottom, #3e2323 377px, #ffb9bb 10%);padding-bottom:55px;}
 
 .annotation{border: 4px solid #ffeaea;margin:15px 0 0;}
 .annotation p{font-family: "Roboto";font-weight: 700; font-size:13px; line-height: 15px; padding: 24px 86px 19px 13px;}
@@ -1390,8 +1406,9 @@ i.face {
 
 .annotation .hurry .counter__text{padding-right:80px;font-size:14px;}
 
-.footer{padding: 36px 0 120px;text-align: center;}
+.footer{padding: 36px 0 16px;text-align: center;}
 .footer p{font-size:16px; line-height: 19px; margin-bottom: 20px;}
+.footer a{color:inherit;}
 
 @-webkit-keyframes body-play {
 	0% {
@@ -1560,7 +1577,7 @@ i.face {
 	top: 50%;
 	width: 25px;
 	height: 25px;
-	border: 4px solid #eceef2;
+	border: 4px solid #ffffff;
 	border-top: none;
 	border-right: none;
 	cursor: pointer;
@@ -1586,7 +1603,7 @@ i.face {
 .reviews .slick-next:active,
 .reviews .slick-prev:hover,
 .reviews .slick-prev:active {
-	border-color: #d41d50
+	opacity: 0.5;
 }
 
 .slick-list{
