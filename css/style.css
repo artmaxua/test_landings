@@ -559,8 +559,8 @@ i.product_safe {
 	min-height: 27px;
 	width: 21px;
 	border-radius: 4px;
-	-webkit-box-shadow: 0 2px 5px #9e9d9d;
-	box-shadow: 0 2px 5px #9e9d9d;
+	-webkit-box-shadow: 0 2px 5px #241f1f;
+	box-shadow: 0 2px 5px #241f1f;
 	text-align: center
 }
 
