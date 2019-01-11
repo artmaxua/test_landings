@@ -1018,9 +1018,7 @@ i.product_safe {
 
 .button:hover,
 .button:active {
-	background-color: #a81840;
-	-webkit-box-shadow: 0 9px 12px #acacac;
-	box-shadow: 0 9px 12px #acacac
+	background: #d80000;
 }
 
 .button-wrap {
